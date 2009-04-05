@@ -1,1 +1,25 @@
-also try pytables (hdf5) for quick, indexed tables of ints
+Experimental tokyocabinet backend for rdflib
+
+Author: Drew Perttula
+
+License: New BSD License, same as
+rdflib. http://www.opensource.org/licenses/bsd-license.php
+
+Besides whatever code is in here, I was also using a straightforward
+patch for rdflib/plugin.py:
+
+--- rdflib/plugin.py	(revision 849)
++++ rdflib/plugin.py	(working copy)
+@@ -85,6 +85,9 @@
+ register('Sleepycat', Store,
+          'rdflib.store.Sleepycat', 'Sleepycat')
+ 
++register('TokyoCabinet', Store,
++         'rdflib.store.TokyoCabinet', 'TokyoCabinet')
++
+
+
+
+
+
+see also pytables (hdf5) for quick, indexed tables of ints
